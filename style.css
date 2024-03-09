@@ -1,116 +1,184 @@
 body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  width: 100%;
- 
-   
-
-  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
 }
+
 .container {
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
-    background-image: url(./assets/bg8.jpeg);
-    background-size: cover;
-    background-position: center;
+    align-items: flex-end;
+    background-image: url(./assets/Untitled\ design\ \(1\).png);
+    background-size: contain;
+    background-position: center top 2rem;
+    background-repeat: no-repeat;
+    margin: auto;
     height: 100vh;
     overflow: hidden;
-    /* Set background color with opacity */
-    background-color: rgba(0, 0, 0, 0.5); /* Adjust the last value (0.5) for opacity */
-  }
-  
-  /* Media query for smaller screens */
-  @media (max-width: 768px) {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
     .container {
-      background-size: cover;
+        background-size: cover;
     }
-  }
-  
-  .container::before {
+
+    .scope span:nth-child(n+6) {
+        display: none;
+    }
+}
+
+.container::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.815), rgba(0, 0, 0, 0.629)); /* Adjust opacity as needed */
-  }
-  
-  
+    background: linear-gradient(rgba(0, 0, 0, 0.601), rgba(0, 0, 0, 0.65));
+}
 
 .title {
-  position: absolute;
- 
-  top: 50%;
-  left: 50%;
-  font-size: 2rem;
-  
-  padding-bottom: 400px;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  color: white; /* Ensure text is visible */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: transparent; /* Set text color to transparent */
+    -webkit-background-clip: text; /* Clip background to text */
+    background-image: linear-gradient(45deg, #e0c985, #00b3ff); /* Apply linear gradient */
+    text-align: center;
+
+    font-size: 4rem;
+    
+    white-space: nowrap;
+    margin-top: -5rem;
+    opacity: 0; /* Initially hide the h1 */
+    animation: fadeIn 1s forwards;/* Apply animation to fade in the h1 */
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%); /* Start position above the final position */
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%); /* Final position */
+    }
+}
+
+.title p {
+    font-size: 2rem;
+    margin-top: -0.8rem;
+    transition: z-index 0.5s; /* Add a transition for smoother effect */
+    z-index: 3; /* Ensure the paragraph stays in front */
+}
+
+@media screen and (max-width: 768px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    .title p {
+        font-size: 1.2rem;
+        margin-top: -0.8rem;
+    }
 }
 
 .scope {
-  position: relative;
-  width: 200px;
-  height: 200px;
-  transform-style: preserve-3d;
-  animation: slid 30s linear infinite;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 3rem;
+    padding-bottom: 0;
+    align-items: flex-end;
 }
 
 .scope span {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transform-origin: center;
-  transform-style: preserve-3d;
-  transform: rotateY(calc(var(--i) * 45deg)) translateZ(350px);
+    display: inline-block;
+    position: relative;
+    height: 100px;
+    animation: moveUpDown 5s alternate infinite;
+    z-index: 10; /* Set a lower z-index for the images */
+}
+
+.scope span:nth-child(1) {
+    animation-delay: 1s;
+}
+
+.scope span:nth-child(2) {
+    animation-delay: 3s;
+}
+
+.scope span:nth-child(3) {
+    animation-delay: 2s;
+}
+
+.scope span:nth-child(4) {
+    animation-delay: 4s;
+}
+
+.scope span:nth-child(5) {
+    animation-delay: 1s;
+}
+
+.scope span:nth-child(6) {
+    animation-delay: 1.5s;
+}
+.scope span:nth-child(7) {
+    animation-delay: 2s;
+}
+.scope span:nth-child(8) {
+    animation-delay: 3s;
+}
+.scope span:nth-child(9) {
+    animation-delay: 1s;
 }
 
 .scope span img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  object-fit: fill;
-  transition: 2s;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 2s;
 }
 
-.scope span:hover img {
-  transform: translateY(-50px) scale(1.7);
+@media (hover: hover) and (pointer: fine) {
+    .scope span:hover img {
+        transform: translateY(-10px) scale(4);
+        margin-top: -6rem;
+        position: relative;
+        z-index: 4;
+        animation-play-state: paused;
+    }
 }
 
-@keyframes slid {
-  0% {
-      transform: perspective(1000px) rotateY(0deg);
-  }
-  100% {
-      transform: perspective(1000px) rotateY(360deg);
-  }
+
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-40px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
 /* Media query for mobile devices */
 @media (max-width: 768px) {
-  .scope {
-      width: 150px;
-      height: 150px;
-  }
-
-  .title {
-    display: block;
-    font-size: 2rem;
-    
-    text-align: center;
-  }
+    .scope {
+        width: 95%;
+        justify-content: space-between;
+    }
 }
+
 
 
 *,
@@ -133,7 +201,7 @@ body {
 .containernav{
     background-color: rgba(0, 0, 0, .85);
     width: 100%;
-    margin: auto;
+    padding:1rem;
 }
 
 .navbar{
@@ -165,7 +233,8 @@ body {
 
 .menu-items li{
     list-style: none;
-    margin-left: 1.5rem;
+
+    margin-left: 7rem;
     font-size: 1.3rem;
 }
 
