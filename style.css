@@ -27,7 +27,7 @@ body {
 @media (max-width: 768px) {
     .container {
         background-size: cover;
-        background-position: 45% 55px;
+        background-position: 48% 55px;
         height: 80vh;
        
     }
@@ -181,10 +181,10 @@ body {
         transform: translateY(0);
     }
     50% {
-        transform: translateY(-40px);
+        transform: translateY(-80px);
     }
     100% {
-        transform: translateY(0);
+        transform: translateY(-20px);
     }
 }
 
@@ -192,6 +192,7 @@ body {
 @media (max-width: 768px) {
     .scope {
         width: 95%;
+        
         justify-content: space-between;
     }
     .scope span:hover img {
@@ -245,7 +246,7 @@ body {
     order: 1;
     width: 75px;
     color: #ffffff;
-    margin-left: 0; /* Push the logo to the left */
+    margin-left: -10px; /* Push the logo to the left */
 }
 
 .menu-items {
