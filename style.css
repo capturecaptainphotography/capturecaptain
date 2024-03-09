@@ -151,7 +151,17 @@ body {
     transition: transform 2s;
 }
 
-@media (hover: hover) and (pointer: fine) {
+.scope span:hover img {
+    transform: translateY(-10px) scale(4);
+    margin-top: -6rem;
+    position: relative;
+    z-index: 4;
+    animation-play-state: paused;
+}
+
+
+
+/* @media (hover: hover) and (pointer: fine) {
     .scope span:hover img {
         transform: translateY(-10px) scale(4);
         margin-top: -6rem;
@@ -159,7 +169,7 @@ body {
         z-index: 4;
         animation-play-state: paused;
     }
-}
+} */
 
 
 @keyframes moveUpDown {
@@ -179,6 +189,9 @@ body {
     .scope {
         width: 95%;
         justify-content: space-between;
+    }
+    .scope span:hover img {
+        transform: translateY(-10px) scale(3);
     }
 }
 

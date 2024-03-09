@@ -1,14 +1,23 @@
-// Loop through each span element
-spans.forEach(span => {
-    // Add event listener for touchstart event
-    span.addEventListener('touchstart', () => {
-        // Add a class to the span when touched
-        span.classList.add('hover');
-    });
+document.addEventListener('DOMContentLoaded', function () {
+    // Check if the device supports hover
+    const isHoverSupported = window.matchMedia('(hover: hover)').matches;
 
-    // Add event listener for touchend event
-    span.addEventListener('touchend', () => {
-        // Remove the class when touch ends
-        span.classList.remove('hover');
-    });
+    if (!isHoverSupported) {
+        // Device does not support hover, attach touch event listeners
+        const scope = document.querySelector('.scope');
+        const spans = scope.querySelectorAll('span');
+
+        spans.forEach(span => {
+            const img = span.querySelector('img');
+
+            // Add touch event listener to each span
+            span.addEventListener('touchstart', function () {
+                img.classList.add('hover');
+            });
+
+            span.addEventListener('touchend', function () {
+                img.classList.remove('hover');
+            });
+        });
+    }
 });
