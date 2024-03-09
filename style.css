@@ -259,6 +259,7 @@ body {
     list-style: none;
 
     margin-left: 7rem;
+    margin-right: 20px;
     font-size: 1.3rem;
 }
 
@@ -272,15 +273,19 @@ body {
 .navbar a:hover{
     color: #117964;
 }
-@media (max-width: 768px){
-    .menu-items li{
+@media (max-width: 768px) {
+    .menu-items {
+        text-align: center; /* Center the menu items horizontally */
+    }
+
+    .menu-items li {
         list-style: none;
-    
-        margin-left: 1rem;
+        display: inline-block; /* Display the menu items inline */
+        margin: 0 0.5rem; /* Add space around each menu item */
         font-size: 0.7rem;
     }
-    
 }
+
 /* @media (max-width: 768px){
     .navbar{
         opacity: 0.95;
