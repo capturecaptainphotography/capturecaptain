@@ -10,7 +10,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    background-image: url(./assets/logo.jpeg);
+    background-image: url(./assets/logobg.jpg);
     background-size: contain;
     background-position: center top 2rem;
     background-repeat: no-repeat;
@@ -18,6 +18,9 @@ body {
     height: 100vh;
     overflow: hidden;
     background-color: rgba(255, 255, 255, 0.5);
+}
+.container h1{
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add text shadow */
 }
 
 /* Media query for smaller screens */
@@ -52,11 +55,12 @@ body {
     z-index: 2;
     color: transparent; /* Set text color to transparent */
     -webkit-background-clip: text; /* Clip background to text */
-    background-image: linear-gradient(45deg, #e0c985, #00b3ff); /* Apply linear gradient */
+    background-image: linear-gradient(45deg, #fde59e, hsl(198, 94%, 73%)); /* Apply linear gradient */
     text-align: center;
 
     font-size: 4rem;
-    
+
+
     white-space: nowrap;
     margin-top: -5rem;
     opacity: 0; /* Initially hide the h1 */
@@ -237,15 +241,20 @@ body {
     align-items: center;
 }
 
-.menu-items{
+.logo{
+.logo {
+    order: 1;
+    width: 75px;
+    color: #ffffff;
+    margin-left: 0; /* Push the logo to the left */
+}
+
+.menu-items {
     order: 2;
     display: flex;
+    margin-left: auto; /* Push the menu items to the right */
 }
-.logo{
-    order: 1;
-    font-size: 2.3rem;
-    color: #ffffff;
-}
+
 
 .menu-items li{
     list-style: none;
@@ -264,8 +273,16 @@ body {
 .navbar a:hover{
     color: #117964;
 }
-
 @media (max-width: 768px){
+    .menu-items li{
+        list-style: none;
+    
+        margin-left: 1rem;
+        font-size: 0.7rem;
+    }
+    
+}
+/* @media (max-width: 768px){
     .navbar{
         opacity: 0.95;
     }
@@ -342,9 +359,9 @@ body {
         box-shadow:  5px 0px 10px 0px #aaa;
         overflow: scroll;
     }
-    /* WebKit-based browsers scrollbar customization */
+
     .navbar .menu-items::-webkit-scrollbar {
-    width: 1px; /* Width of the scrollbar */
+    width: 1px;
   }
   
   
@@ -378,13 +395,13 @@ body {
         transform: rotate(-45deg);
     }
 
-}
+} */
 
-@media (max-width: 500px){
+/* @media (max-width: 500px){
     .navbar-container input[type="checkbox"]:checked ~ .logo{
         display: none;
     }
-}
+} */
 
 
 /*-------------------services--------------*/
