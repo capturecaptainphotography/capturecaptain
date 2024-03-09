@@ -24,6 +24,9 @@ body {
 @media (max-width: 768px) {
     .container {
         background-size: cover;
+        background-position: 45% 55px;
+        height: 80vh;
+       
     }
 
     .scope span:nth-child(n+6) {
@@ -79,7 +82,7 @@ body {
 
 @media screen and (max-width: 768px) {
     .title {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .title p {
