@@ -407,82 +407,27 @@ body {
         display: none;
     }
 } */
-
-
-/*-------------------services--------------*/
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital@0;1&display=swap');
-
-.service {
-    background-color: rgb(25, 23, 23);
-}
-.title1{
-  text-align: center;
-  font-size: 2rem;
-  padding-top: 2rem;
-  color: #ffffff;
-
-}
-.services-col h2 {
-    display: block;
-    padding: 1rem 0;
-    font-size: 2rem;
-    color: #000;
-    text-align: center; /* Center-align the text */
-}
-
-/* Additional styles for h2 in smaller screens */
-@media (max-width: 767px) {
-    .services-col h2 {
-        font-size: 1.5rem; /* Adjusted font size for smaller screens */
-    }
-}
-.services-row {
+.gallery-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    gap: 20px; /* Adjust the gap between sections */
+}
+
+.gallery-section {
+    display: flex;
     flex-wrap: wrap;
-    margin-top: 20px;
-    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Adjust the gap between images */
 }
 
-.services-col {
-    height: auto; /* Adjusted height */
-    color: rgb(236, 68, 90);
-    background-color: white;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    background-position: center;
-    background-size: cover;
-    border-radius: 15px;
-    flex: 1 1 15rem;
-    padding: 1.2rem;
-    margin: 1.5rem;
+.gallery-image {
+    width: calc(20% - 20px); /* Adjust the width of each image */
+    max-width: 200px; /* Maximum width of each image */
+    height: auto;
+    border-radius: 5px; /* Optional: Add rounded corners to images */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow to images */
 }
 
-.services-col i {
-    padding: 1.5rem; /* Adjusted padding */
-    border: none;
-    background: aliceblue;
-    color: rgb(53 167 156);
-    border-radius: 50%; /* Changed to circle shape */
-    font-size: 2.2rem; /* Adjusted font size */
-}
-
-.services-col h2 {
-    padding: 1rem 0;
-    font-size: 2rem;
-    color: #000;
-}
-
-.services-col p {
-    font-size: 1.2rem;
-    color: #000;
-}
-
-@media (max-width: 767px) {
-
-    .services-col {
-        flex: 1 1 100%; /* Adjusted flex property for smaller screens */
-    }
-}
 
 
 /*----------------------vendor section------------*/
@@ -560,3 +505,104 @@ body {
     padding: 7px;
     color: blue;
 }
+
+
+
+
+
+/*  portfolio ---------*/
+
+.portfolo{
+
+    background-image: url(./assets/portfolio-img/bg.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(14, 12, 12, 0.719);
+}
+.portfolo h1{
+    background: #000000e6;
+    text-align: center;
+    padding: 10px;
+    font-size: 50px;
+    color: #ffffff;
+    padding-bottom: 10px;
+   
+}
+   
+
+.portf-container {
+    text-align: center;
+    color: #ffffff;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border: 1px solid #ffffffa1; /* White border on all sides */
+    border-bottom-width: 3px; /* Border width for the bottom */
+    background: #000000b6;
+}
+.portf-section {
+    margin: 1rem;
+    
+}
+    
+
+
+.portf-section img {
+    width: 100px; /* Width of small images */
+    height: auto;
+    padding: 1px;
+    border-radius: 5px; /* Optional: Add rounded corners to images */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.385); /* Optional: Add a shadow to images */
+    transition: 0.5s;
+}
+
+
+.portf-section img:hover,
+.portf-section img:focus {
+    transform: scale(3); /* Increase image size on hover or focus */
+}
+
+
+
+
+
+.portf-section img:nth-child(2),
+.portf-section img:nth-child(4) {
+    width: 150px; /* Width of slightly larger images */
+    height: auto;
+    margin-bottom: 2rem;
+}
+
+.portf-section img:nth-child(3) {
+    width: 200px; /* Width of large images */
+    height: auto;
+}
+
+.portf-section img:nth-child(1),
+.portf-section img:nth-child(5) {
+    margin-bottom: 3rem;
+    height: auto;
+}
+@media (max-width: 768px) {
+    /* Media queries for smaller screens */
+    
+
+    .portf-section img:nth-child(2),
+    .portf-section img:nth-child(4) {
+        width: 75px; /* Adjust width of slightly larger images for small screens */
+        margin-bottom: 1rem; /* Adjust margin for small screens */
+    }
+    
+    .portf-section img:nth-child(3) {
+        width: 100px; /* Adjust width of large image for small screens */
+    }
+    
+    .portf-section img:nth-child(1),
+    .portf-section img:nth-child(5) {
+        margin-bottom: 2rem;
+        width: 50px; /* Adjust margin for small screens */
+    }
+}
+
+
+
