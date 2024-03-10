@@ -518,7 +518,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: rgba(14, 12, 12, 0.719);
+    background-color: rgba(14, 12, 12, 0.968);
 }
 .portfolo h1{
     background: #000000e6;
@@ -538,7 +538,7 @@ body {
     padding-bottom: 10px;
     border: 1px solid #ffffffa1; /* White border on all sides */
     border-bottom-width: 3px; /* Border width for the bottom */
-    background: #000000b6;
+    background: #000000db;
 }
 .portf-section {
     margin: 1rem;
