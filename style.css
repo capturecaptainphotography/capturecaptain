@@ -764,9 +764,10 @@ body {
     color: #000;
 }
 
-.pc-table button {
+.pc-table a {
     background: linear-gradient(331deg, #321d58, #7344c8);
     color: #fff;
+    text-decoration: none;
     border: none;
     border-radius: 5em;
     padding: 1.1em 2.3em;
@@ -776,7 +777,7 @@ body {
     cursor: pointer;
 }
 
-.pc-table button:hover {
+.pc-table a:hover {
     background: #fff;
     color: #111;
 }
@@ -786,11 +787,11 @@ body {
 }
 
 .pc-table:nth-child(2) .table-header,
-.pc-table:nth-child(2) button {
+.pc-table:nth-child(2) a {
     background: linear-gradient(331deg, #b71a50, #ff3c7d);
 }
 
 .pc-table:nth-child(3) .table-header,
-.pc-table:nth-child(3) button {
+.pc-table:nth-child(3) a {
     background: linear-gradient(331deg, #cf3c31, #ff5d51);
 }
