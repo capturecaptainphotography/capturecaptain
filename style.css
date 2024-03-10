@@ -548,7 +548,7 @@ body {
 
 
 .portf-section img {
-    width: 100px; /* Width of small images */
+    width: 150px; /* Width of small images */
     height: auto;
     padding: 1px;
     border-radius: 5px; /* Optional: Add rounded corners to images */
@@ -568,13 +568,13 @@ body {
 
 .portf-section img:nth-child(2),
 .portf-section img:nth-child(4) {
-    width: 150px; /* Width of slightly larger images */
+    width: 200px; /* Width of slightly larger images */
     height: auto;
     margin-bottom: 2rem;
 }
 
 .portf-section img:nth-child(3) {
-    width: 200px; /* Width of large images */
+    width: 250px; /* Width of large images */
     height: auto;
 }
 
@@ -589,20 +589,37 @@ body {
 
     .portf-section img:nth-child(2),
     .portf-section img:nth-child(4) {
-        width: 75px; /* Adjust width of slightly larger images for small screens */
+        width: 100px; /* Adjust width of slightly larger images for small screens */
         margin-bottom: 1rem; /* Adjust margin for small screens */
     }
     
     .portf-section img:nth-child(3) {
-        width: 100px; /* Adjust width of large image for small screens */
+        width: 150px; /* Adjust width of large image for small screens */
     }
     
     .portf-section img:nth-child(1),
     .portf-section img:nth-child(5) {
         margin-bottom: 2rem;
-        width: 50px; /* Adjust margin for small screens */
+        width: 75px; /* Adjust margin for small screens */
     }
 }
 
+@media (max-width: 480px) {
+    .portf-section img:nth-child(2),
+    .portf-section img:nth-child(4) {
+        width: 50px; /* Adjust width of slightly larger images for smaller mobile screens */
+        margin-bottom: 0.5rem; /* Adjust margin for smaller mobile screens */
+    }
+    
+    .portf-section img:nth-child(3) {
+        width: 75px; /* Adjust width of large image for smaller mobile screens */
+    }
+    
+    .portf-section img:nth-child(1),
+    .portf-section img:nth-child(5) {
+        margin-bottom: 1rem;
+        width: 35px; /* Adjust margin for smaller mobile screens */
+    }
+}
 
 
