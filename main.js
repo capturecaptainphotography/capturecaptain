@@ -3,26 +3,22 @@
  function changeContactDetails() {
     const newDetails = [                      //here you change contact datails
         { iconClass: 'fas fa-home', content: 'hi New Street, New City, New Country' },
-        { iconClass: 'fas fa-phone', content: ' 987-654-3210' },
+        { iconClass: 'fas fa-phone', content: ' 8919513717' },
         { iconClass: 'fas fa-envelope', content: 'example@example.com' }
 
     ];
 
-        // Get the phone number and WhatsApp number dynamically
-const phoneNumber = "+123456789"; // Change this to your desired phone number
-const whatsappNumber = "+123456789"; // Change this to your desired WhatsApp number
-
-
-
-
-
-
-// Update the href attribute of the phone link
-document.getElementById("phoneLink").href = "tel:" + phoneNumber;
-
-// Update the href attribute of the WhatsApp link
-document.getElementById("whatsappLink").href = "tel:" + whatsappNumber;
-
+    document.addEventListener("DOMContentLoaded", function() {
+        const phoneNumber = "{+918919513717"; // Change this to your desired phone number
+        const whatsappNumber = "+918919513717"; // Change this to your desired WhatsApp number
+    
+        // Update the href attribute of the phone link
+        document.getElementById("phoneLink").href = "tel:" + phoneNumber;
+    
+        // Update the href attribute of the WhatsApp link
+        document.getElementById("whatsappLink").href = "https://api.whatsapp.com/send?phone=" + whatsappNumber + "&text=Hi%20Capture%20Captain%20Photography!%20I%20need%20more%20info%20about%20You.";
+    });
+    
 
     const contactInfoItems = document.querySelectorAll('.pc-contact-info-item');
 
