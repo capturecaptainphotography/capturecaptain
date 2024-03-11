@@ -857,6 +857,7 @@ section {
 }
 
 .pc-section-header p {
+    margin: 5px;
     padding-top: 10px;
   color: #FFF;
 }
