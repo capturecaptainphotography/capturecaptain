@@ -1046,9 +1046,20 @@ section {
 
 .ccserv-section_details {
     text-align: center;
-    font-size: 25px;
-    color: #ffffffc0;
+    
+    color: #bababaea;
 }
+
+
+.ccserv-single_service h4::before {
+    content: "\2022"; /* Unicode for bullet character */
+    color: #000000; /* Color of the dot */
+    margin-right: 5px; /* Adjust spacing between dot and text */
+}
+
+
+
+
 
 
 
@@ -1085,22 +1096,22 @@ section {
     grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
     justify-content: center;
     gap: 30px;
-    margin-top: 80px;
+    margin-top: 40px;
 }
 
 .ccserv-our_service_section > .ccserv-single_service_container > .ccserv-single_service {
     max-width: 450px;
-    background-color: #1b1919;
+    background-color: #e3e3e3;
     padding: 25px 30px;
     border-radius: 6px 6px 0px 6px;
-    box-shadow: 0 5px 16px #0008;
+    box-shadow: 0 5px 16px rgba(93, 93, 93, 0.533);
     transition: 0.3s ease-in-out;
 }
 
 .ccserv-our_service_section > .ccserv-single_service_container > .ccserv-single_service .ccserv-top {
     display: flex;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 2px;
 }
 
 .ccserv-our_service_section > .ccserv-single_service_container > .ccserv-single_service .ccserv-top .ccserv-icon {
@@ -1109,7 +1120,7 @@ section {
     min-width: 100px;
     height: 100px;
     font-size: 50px;
-    color: #ffffff5d;
+    color: #3533335d;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1130,23 +1141,26 @@ section {
 }
 
 .ccserv-our_service_section > .ccserv-single_service_container > .ccserv-single_service .ccserv-top .ccserv-text .ccserv-__one {
-    color: #fff9;
+    color: rgb(2, 2, 2);
+    font-size: 25px;
 }
 
 .ccserv-our_service_section > .ccserv-single_service_container > .ccserv-single_service .ccserv-top .ccserv-text .ccserv-__two {
-    font-size: 22px;
-    color: #fffe;
+    
+    color: rgba(57, 50, 50, 0.933);
+    
 }
 
 .ccserv-our_service_section > .ccserv-single_service_container > .ccserv-single_service .ccserv-bottom {
-    color: #fffd;
+    color: rgba(32, 30, 30, 0.867);
     font-size: 18px;
     line-height: 1.5;
     font-weight: 400;
+    
 }
 
 .ccserv-our_service_section > .ccserv-single_service_container > .ccserv-single_service:hover {
-    background-color: #41D8C9;
+    background-color: #a0fff4;
 }
 
 .ccserv-our_service_section > .ccserv-single_service_container > .ccserv-single_service:hover .ccserv-icon {
