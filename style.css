@@ -104,6 +104,8 @@ body {
     margin-bottom: 3rem;
     padding-bottom: 0;
     align-items: flex-end;
+    overflow-x: visible;
+
 }
 
 .scope span {
@@ -207,7 +209,7 @@ body {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    
+    overflow-wrap: anywhere;
 
 }
 
@@ -929,7 +931,7 @@ section {
 
 .pc-contact-info-content p {
   color: #ffffff;
-  font-size: 1.4em;
+  font-size: 1.1em;
 }
 
 .pc-contact-form {
