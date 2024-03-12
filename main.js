@@ -2,7 +2,7 @@
  // Function to change contact details
  function changeContactDetails() {
     const newDetails = [                      //here you change contact datails
-        { iconClass: 'fas fa-home', content: 'hi New Street, New City, New Country' },
+        { iconClass: 'fas fa-user', content: 'SRINIVAS' },
         { iconClass: 'fas fa-phone', content: ' 8919513717' },
         { iconClass: 'fas fa-envelope', content: 'example@example.com' }
 
