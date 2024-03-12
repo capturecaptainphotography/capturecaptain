@@ -286,7 +286,7 @@ body {
     .menu-items li {
         list-style: none;
         display: inline-block; /* Display the menu items inline */
-        margin: 0 0.5rem; /* Add space around each menu item */
+        margin: 0 0.4rem; /* Add space around each menu item */
         font-size: 0.69rem;
     }
 }
