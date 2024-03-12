@@ -201,14 +201,15 @@ body {
 }
 
 
-
 *,
 *::after,
 *::before{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    margin-right: -4px;
 }
+
 
 .html{
     font-size: 62.5%;
