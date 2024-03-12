@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Company Name</title>
+    <meta name="keywords" content="Capture Captain Photography, wedding photography, special moments, professional photography services">
+
+    <title>capture Captain photography</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -18,7 +20,8 @@
                 <li><a href="services.html">Services</a></li>
                 <li><a href="packages.html">Packages</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="#">Booking</a></li>
+                <li><a id="openFormButton1">Booking</a></li>
+
             </ul>
             <a href="index.html">
                 <img class="logo" src="./assets/logo.png" alt="Logo">
@@ -27,14 +30,15 @@
         </div>
 </nav>
     
+    
     <!-- packages    -->  
 
 
     <div class="heading" style="padding-top: 60px;">
         <h1>Packages</h1></div>
-<section class="cc-pricing" style="padding-top: 80px;">
+       <section class="cc-pricing" style="padding-top: 80px;">
     
-    <div class="pc-table">
+       <div class="pc-table">
         <div class="pc-logo">
             <h1></h1>
         </div>
@@ -86,10 +90,10 @@
             </div>
         </div>
         <a href="https://api.whatsapp.com/send?phone=918919513717&text=Hi Capture Captain Photography!| need more info about Basic Package ." class="whatsapp"
-aria-label="whatsapp me">Book Now</a>
+          aria-label="whatsapp me">Book Now</a>
 
-    </div>
-    <div class="pc-table">
+      </div>
+      <div class="pc-table">
         <div class="pc-logo">
             <h1></h1>
         </div>
@@ -147,8 +151,8 @@ aria-label="whatsapp me">Book Now</a>
             </div>
         </div>        <a href="https://api.whatsapp.com/send?phone=918919513717&text=Hi Capture Captain Photography!| need more info about Premium Package ." class="whatsapp"
         aria-label="whatsapp me">Book Now</a>
-    </div>
-    <div class="pc-table">
+         </div>
+         <div class="pc-table">
         <div class="pc-logo">
             <h1></h1>
         </div>
@@ -204,47 +208,84 @@ aria-label="whatsapp me">Book Now</a>
 
 
 
-<!--                 footer      -->
-<footer>
-    <div class="footer">
-    <div class="row">
-    <a href="#"><i class="fa fa-facebook"></i></a>
-    <a href="#"><i class="fa fa-instagram"></i></a>
-    <a href="#"><i class="fa fa-youtube"></i></a>
-    <a href="#"><i class="fa fa-twitter"></i></a>
-   </div>
- 
-   <div class="row">
-   <ul>
-   <li><a href="contact.html">Contact us</a></li>
-   <li><a href="services.html">Our Services</a></li>
-   <li><a href="portfolio.html">Portfolio</a></li>
-   <li><a href="packages.html">Packages</a></li>
-   <li><a href="#">Booking</a></li>
-   </ul>
-   </div>
- 
-   <div class="row">
-     Capture Captain Photography Copyright © 2021 - All rights reserved || Designed By:
-     <a href="https://www.instagram.com/nani4moon" target="_blank">@nani4moon</a>
-   </div>
- 
-   </div>
- </footer>
+<!---     book now popup -->
 
-
-
-<!--      whatsapp and call floating icons     -->
-
-<div class="floating-icons">
-    <a id="phoneLink" href="#"><i class="fas fa-phone"></i></a>
-    <a id="whatsappLink" href="#"><i class="fab fa-whatsapp"></i></a>
+<div id="popupContainer" class="popup-container">
+    <div id="closeform" class="custom-form-container">
+      <div id="customPopupForm" class="custom-popup-form">
+        <div class="custom-contact-form">
+          <form action="https://api.web3forms.com/submit" method="POST" id="custom-contact-form">
+            <h2>BOOK NOW</h2>
+            <input type="hidden" name="access_key" value="">
+            <div class="custom-input-box">
+              <input type="text" required="true" name="fullname" placeholder="Name">
+            </div>
+            <div class="custom-input-box">
+              <input type="tel" required="true" name="phone" placeholder="Phone number">
+            </div>
+            <div class="custom-input-box">
+              <textarea name="message" placeholder="Message"></textarea>
+            </div>
+  
+            <button type="submit" data-text="Send"><span>Send</span></button>
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
-
- 
-
-
-
-     <script src="main.js"></script>
- </body>
- </html>
+  
+  
+  
+  
+  
+  
+  
+  
+  <!--                 footer      -->
+     <footer>
+       <div class="footer">
+       <div class="row">
+        <a href="https://www.instagram.com/ml_yoyo_717/"><i class="fa fa-instagram"></i></a>
+       
+        <!-- <a href="#"><i class="fa fa-facebook"></i></a>
+       <a href="#"><i class="fa fa-youtube"></i></a>
+       <a href="#"><i class="fa fa-twitter"></i></a> -->
+  
+      </div>
+    
+      <div class="row">
+      <ul>
+      <li><a href="contact.html">Contact us</a></li>
+      <li><a href="services.html">Our Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="packages.html">Packages</a></li>
+      <li><a id="openFormButton2">Booking</a></li>
+      </ul>
+      </div>
+    
+      <div class="row">
+        Capture Captain Photography Copyright © 2024 - All rights reserved || Designed By:
+        <a href="https://www.instagram.com/nani4moon" target="_blank">@nani4moon</a>
+      </div>
+    
+      </div>
+    </footer>
+  
+  
+  <!--      whatsapp and call floating icons     -->
+  
+  <div class="floating-icons">
+    <a id="phoneLink" href=""><i class="fas fa-phone phone-icon"></i></a>
+    <a id="whatsappLink" href=""><i class="fab fa-whatsapp whatsapp-icon"></i></a>
+  </div>
+  
+  
+    
+  
+  
+  
+        <script src="main.js"></script>
+    </body>
+    </html>
+    
+  
