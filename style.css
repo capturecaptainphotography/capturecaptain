@@ -700,7 +700,6 @@ body {
 
 .pc-logo {
     background: url(./assets/logo.png);
-    background-size: cover;
     background-size: 296px;
     background-position-x: -93px;
     background-position-y: -58px;
