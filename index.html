@@ -15,8 +15,36 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  
+  <script type="text/javascript">
+    emailjs.init('nR6oLlDDV8E46yOow')
+  </script>
+
+
+
+
+
+
+
+
 </head>
 <body>
+  <!--        loader -->
+
+  <div class="loader-wrapper">
+    <div class="loader"></div>
+  </div>
+
+
+
+
+
+
+
+
+
   <nav class="navbar">
         <div class="navbar-container containernav">
             <input type="checkbox" name="" id="">
@@ -53,9 +81,9 @@
             <span style="--i:8;"><img src="./assets/bg8.jpeg" alt="not found"></span>
             <span style="--i:9;"><img src="./assets/bg9.jpeg" alt="not found"></span>
         </div>
-        <h2 class="title">We do more then just plan<br>
+        <h2 class="title">WE DO MORE THEN JUST PLAN<br>
             <br><p>book your wedding with <br>
-                 us to creative 
+                 us to Create 
                  <br>memories</p></h2>
     </div>
 
@@ -113,6 +141,22 @@
             <img src="./assets/portfolio-img/sangeeths/pic5.jpeg" alt="Image 5">
         </section>
      </div>
+
+
+     <div class="portf-container">
+      <h2>Candids</h2>
+      <section class="portf-section">
+          <!-- Images for the fourth section -->
+          <img src="./assets/portfolio-img/candids/pic1.jpeg" alt="Image 1">
+          <img src="./assets/portfolio-img/candids/pic2.jpeg" alt="Image 2">
+          <img src="./assets/portfolio-img/candids/pic3.jpeg" alt="Image 3">
+          <img src="./assets/portfolio-img/candids/pic4.jpeg" alt="Image 4">
+          <img src="./assets/portfolio-img/candids/pic5.jpeg" alt="Image 5">
+      </section>
+   </div>
+
+
+
      <div class="portf-container">
         <h2>Wedding Photos</h2>
         <section class="portf-section">
@@ -477,39 +521,103 @@
                   </div>
               </div>
               <div class="pc-contact-form">
-                  <!-- Contact form -->
-                  <form action="" id="pc-contact-form">
-                    <h2>Send Message</h2>
-                    <div class="pc-input-box">
-                        <input type="text" required="true" name="">
-                        <span>Full Name</span>
-                    </div>
-                    
-                    <div class="pc-input-box">
-                        <input type="email" required="true" name="">
-                        <span>Email</span>
-                    </div>
-                    
-                    <div class="pc-input-box">
-                        <input type="tel" required="true" name="">
-                        <span>Phone Number</span>
-                    </div>
-                    
-                    <div class="pc-input-box">
-                        <textarea required="true" name=""></textarea>
-                        <span>Type your Message...</span>
-                    </div>
-                    
-                    <div class="pc-input-box">
-                        <input type="submit" value="Send" name="">
-                    </div>
-                </form>
-                
-              </div>
+                <!-- Contact form -->
+                <div id="pc-contact-form">
+                  <h2>Send Message</h2>
+                  <div class="pc-input-box">
+                      <input type="text" required="true" name="" id="name">
+                      <span>Full Name</span>
+                  </div>
+                  
+                  <div class="pc-input-box">
+                      <input type="email" required="true" name=""id="email">
+                      <span>Email</span>
+                  </div>
+                  
+                  <div class="pc-input-box">
+                      <input type="tel" required="true" name=""id="number">
+                      <span>Phone Number</span>
+                  </div>
+                  
+                  <div class="pc-input-box">
+                      <textarea required="true" name="" id="message"></textarea>
+                      <span>Type your Message...</span>
+                  </div>
+                  
+                  <div class="pc-input-box">
+                      <input type="submit" value="Send" name="" onclick="sendMail()">
+                  </div>
+            </div>
           </div>
       </div>
   </section>
 </main>
+
+
+
+
+
+
+
+
+
+
+
+<!--          package popup-->
+
+<div class="pack-popup-container" id="popUp" >
+  <div class="pop-pc-table" >
+  <div class="pop-pc-logo">
+      <h1></h1>
+  </div>
+
+  <div class="pop-shadow-con">
+      <div class="pop-table-header">
+          <div class="pop-pc-title">
+              <h1>Recommended</h1>
+              <p>Personally recommend this package for you</p>
+          </div>
+      </div>
+  </div>
+
+  <div class="pop-table-body">
+      <div class="pop-body-title">
+          <h2>Exclusive for you</h2>
+          <p></p>
+      </div>
+      <ul>
+          
+          <li>
+              <i class="fas fa-check"></i>
+              <span>1 Photographer</span>
+          </li>
+          <li>
+              <i class="fas fa-check"></i>
+              <span>1 Candid Photographer</span>
+          </li>
+          <li>
+              <i class="fas fa-check"></i>
+              <span>2 Videographers</span>
+          </li>
+          <li>
+              <i class="fas fa-check"></i>
+              <span>1 4k Drone</span>
+          </li>
+          <li>
+              <i class="fas fa-check"></i>
+              <span>40-50 Sheets Album</span>
+          </li>
+          
+      </ul>
+      <div class="pop-body-title">
+          <p>Just</p>
+          <h2>59,999</h2>
+      </div>
+  </div>
+  <a href="https://api.whatsapp.com/send?phone=918919513717&text=Hi Capture Captain Photography!| need more info about Recommended Package ." class="pop-whatsapp" aria-label="whatsapp me">Book Now</a>
+</div>
+</div>
+
 
 
 
@@ -521,21 +629,21 @@
   <div id="closeform" class="custom-form-container">
     <div id="customPopupForm" class="custom-popup-form">
       <div class="custom-contact-form">
-        <form action="https://api.web3forms.com/submit" method="POST" id="custom-contact-form">
+        <div id="custom-contact-form">
           <h2>BOOK NOW</h2>
           <input type="hidden" name="access_key" value="">
           <div class="custom-input-box">
-            <input type="text" required="true" name="fullname" placeholder="Name">
+            <input id="namepop" type="text" required="true" name="fullname" placeholder="Name">
           </div>
           <div class="custom-input-box">
-            <input type="tel" required="true" name="phone" placeholder="Phone number">
+            <input id="numberpop" type="tel" required="true" name="phone" placeholder="Phone number">
           </div>
           <div class="custom-input-box">
-            <textarea name="message" placeholder="Message"></textarea>
+            <textarea id="messagepop" name="message" placeholder="Message"></textarea>
           </div>
 
-          <button type="submit" data-text="Send"><span>Send</span></button>
-        </form>
+          <button type="submit" onclick="sendMailpop()" data-text="Send"><span>Send</span></button>
+        </div>
       </div>
     </div>
   </div>

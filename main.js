@@ -4,7 +4,7 @@
     const newDetails = [                      //here you change contact datails
         { iconClass: 'fas fa-user', content: 'SRINIVAS' },
         { iconClass: 'fas fa-phone', content: ' 8919513717' },
-        { iconClass: 'fas fa-envelope', content: 'example@example.com' }
+        { iconClass: 'fas fa-envelope', content: 'capturecaptainphotography1@gmail.com' }
 
     ];
 
@@ -152,34 +152,18 @@ document.getElementById("custom-contact-form").addEventListener("submit", functi
   
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// pop up package 
+document.addEventListener("DOMContentLoaded", function() {
+    
+    setTimeout(function() {
+        document.getElementById("popUp").style.display = "block";
+    }, 15000); // 15 seconds
+});
+document.getElementById("popUp").addEventListener("click", function(event) {
+    if (event.target === this) {
+        document.getElementById("popUp").style.display = "none";
+    }
+});
 
 
 
@@ -213,3 +197,100 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+//   contact connection
+function sendMail() {
+    // Get the values of the input fields
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var number = document.getElementById("number").value;
+    var message = document.getElementById("message").value;
+  
+    // Check if all required fields are filled out
+    if (!name || !number) {
+      alert("Please fill out all required fields: Name and phone number");
+      return; // Exit the function early if any field is empty
+    }
+  
+    // Prepare parameters for sending email
+    var params = {
+      name: name,
+      email: email,
+      number: number,
+      message: message
+    };
+  
+    // EmailJS service and template IDs
+    const serviceID = "service_kmhigao";
+    const templateID = "template_av8h1jo";
+  
+    // Send the email using EmailJS
+    emailjs.send(serviceID, templateID, params)
+      .then(res => {
+        // Clear the form fields after successful submission
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("number").value = "";
+        document.getElementById("message").value = "";
+        console.log(res);
+        alert("Your message has been sent successfully!");
+      })
+      .catch(err => console.log(err));
+  }
+  
+
+  //popup book now connection
+
+
+  
+function sendMailpop() {
+    // Get the values of the input fields
+    var namepop = document.getElementById("namepop").value;
+  
+    var numberpop = document.getElementById("numberpop").value;
+    var messagepop = document.getElementById("messagepop").value;
+  
+    // Check if all required fields are filled out
+    if (!namepop || !numberpop) {
+      alert("Please fill out all required fields: Name and phone number");
+      return; // Exit the function early if any field is empty
+    }
+  
+    // Prepare parameters for sending email
+    var params = {
+      namepop: namepop,
+      numberpop: numberpop,
+      messagepop: messagepop
+    };
+  
+    // EmailJS service and template IDs
+    const serviceID = "service_kmhigao";
+    const templateID = "template_z50h7th";
+  
+    // Send the email using EmailJS
+    emailjs.send(serviceID, templateID, params)
+      .then(res => {
+        // Clear the form fields after successful submission
+        document.getElementById("namepop").value = "";
+        document.getElementById("numberpop").value = "";
+        document.getElementById("messagepop").value = "";
+        console.log(res);
+        alert("Your message has been sent successfully!");
+      })
+      .catch(err => console.log(err));
+  }
+  
+
+
+
+
+
+
+
+
+
+  // Simulate content loading (you can replace this with your actual content loading logic)
+window.addEventListener('load', function() {
+    // Content is loaded, remove the loader
+    document.body.classList.add('loaded');
+  });
+  

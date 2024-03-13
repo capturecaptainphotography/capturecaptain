@@ -15,8 +15,36 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  
+  <script type="text/javascript">
+    emailjs.init('nR6oLlDDV8E46yOow')
+  </script>
+
+
+
+
+
+
+
+
 </head>
 <body>
+  <!--        loader -->
+
+  <div class="loader-wrapper">
+    <div class="loader"></div>
+  </div>
+
+
+
+
+
+
+
+
+
   <nav class="navbar">
         <div class="navbar-container containernav">
             <input type="checkbox" name="" id="">
@@ -34,7 +62,6 @@
             
         </div>
 </nav>
-    
     
 
 
@@ -176,27 +203,87 @@
 
 
 
+<!--          package popup-->
+
+<div class="pack-popup-container" id="popUp" >
+  <div class="pop-pc-table" >
+  <div class="pop-pc-logo">
+      <h1></h1>
+  </div>
+
+  <div class="pop-shadow-con">
+      <div class="pop-table-header">
+          <div class="pop-pc-title">
+              <h1>Recommended</h1>
+              <p>Personally recommend this package for you</p>
+          </div>
+      </div>
+  </div>
+
+  <div class="pop-table-body">
+      <div class="pop-body-title">
+          <h2>Exclusive for you</h2>
+          <p></p>
+      </div>
+      <ul>
+          
+          <li>
+              <i class="fas fa-check"></i>
+              <span>1 Photographer</span>
+          </li>
+          <li>
+              <i class="fas fa-check"></i>
+              <span>1 Candid Photographer</span>
+          </li>
+          <li>
+              <i class="fas fa-check"></i>
+              <span>2 Videographers</span>
+          </li>
+          <li>
+              <i class="fas fa-check"></i>
+              <span>1 4k Drone</span>
+          </li>
+          <li>
+              <i class="fas fa-check"></i>
+              <span>40-50 Sheets Album</span>
+          </li>
+          
+      </ul>
+      <div class="pop-body-title">
+          <p>Just</p>
+          <h2>59,999</h2>
+      </div>
+  </div>
+  <a href="https://api.whatsapp.com/send?phone=918919513717&text=Hi Capture Captain Photography!| need more info about Recommended Package ." class="pop-whatsapp" aria-label="whatsapp me">Book Now</a>
+</div>
+</div>
+
+
+
+
+
+
 <!---     book now popup -->
 
 <div id="popupContainer" class="popup-container">
   <div id="closeform" class="custom-form-container">
     <div id="customPopupForm" class="custom-popup-form">
       <div class="custom-contact-form">
-        <form action="https://api.web3forms.com/submit" method="POST" id="custom-contact-form">
+        <div id="custom-contact-form">
           <h2>BOOK NOW</h2>
           <input type="hidden" name="access_key" value="">
           <div class="custom-input-box">
-            <input type="text" required="true" name="fullname" placeholder="Name">
+            <input id="namepop" type="text" required="true" name="fullname" placeholder="Name">
           </div>
           <div class="custom-input-box">
-            <input type="tel" required="true" name="phone" placeholder="Phone number">
+            <input id="numberpop" type="tel" required="true" name="phone" placeholder="Phone number">
           </div>
           <div class="custom-input-box">
-            <textarea name="message" placeholder="Message"></textarea>
+            <textarea id="messagepop" name="message" placeholder="Message"></textarea>
           </div>
 
-          <button type="submit" data-text="Send"><span>Send</span></button>
-        </form>
+          <button type="submit" onclick="sendMailpop()" data-text="Send"><span>Send</span></button>
+        </div>
       </div>
     </div>
   </div>
