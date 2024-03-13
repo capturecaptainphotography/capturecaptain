@@ -288,9 +288,18 @@ function sendMailpop() {
 
 
 
-  // Simulate content loading (you can replace this with your actual content loading logic)
-window.addEventListener('load', function() {
-    // Content is loaded, remove the loader
+// Function to hide the loader
+function hideLoader() {
     document.body.classList.add('loaded');
+  }
+  
+  // Event listener for when the DOM is fully loaded
+  document.addEventListener('DOMContentLoaded', function() {
+    hideLoader();
+  });
+  
+  // Event listener for when all resources have finished loading
+  window.addEventListener('load', function() {
+    hideLoader();
   });
   
